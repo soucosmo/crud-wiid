@@ -21,6 +21,7 @@ class CreateCitiesTable extends Migration
                 ->on('states')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+            $table->string('name', 20);
             $table->softDeletesTz();
             $table->timestampsTz();
         });

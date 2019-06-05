@@ -5,14 +5,14 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class State extends Model
+class City extends Model
 {
     use SoftDeletes;
 
     protected $guarded = [];
 
-    function city()
+    function state()
     {
-        return $this->hasMany(City::class);
+        return $this->belongsTo(State::class);
     }
 }
