@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -36,4 +37,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function getBirthAttribute($value)
+    {
+        return Carbon::parse($value)->format('Y-m-d');
+    }
+
+    function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }

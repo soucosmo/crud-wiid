@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('user', 'UserController')->except('index')->middleware('auth');
+
+Route::get('state/{id}', function ($id) {
+    return \App\City::whereStateId($id)->get();
+});
+
+Route::view('register', 'auth.register', [
+    'states' => \App\State::get()
+])->name('register');

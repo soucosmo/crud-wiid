@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'document' => '123.456.789-10',
             'birth' => now()->subYears(22),
             'address' => 'rua abc, numero 125.',
+            'city_id' => 2,
             'password' => Hash::make(12345678),
             'is_admin' => true,
             'created_at' => now(),

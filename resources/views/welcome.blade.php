@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Crud de teste wiid
+                    WIID
                 </div>
             </div>
         </div>
