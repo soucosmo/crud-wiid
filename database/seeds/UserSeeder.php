@@ -21,7 +21,6 @@ class UserSeeder extends Seeder
             'address' => 'rua abc, numero 125.',
             'city_id' => 2,
             'password' => Hash::make(12345678),
-            'is_admin' => true,
             'created_at' => now(),
             'updated_at' => now()
         ]);
